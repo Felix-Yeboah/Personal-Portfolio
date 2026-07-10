@@ -82,6 +82,13 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
 
+function encodeFormData(formElement) {
+  const data = new FormData(formElement);
+  return Array.from(data.entries())
+    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .join('&');
+}
+
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -127,9 +134,36 @@ if (contactForm) {
       return;
     }
 
-    formStatus.textContent = 'Thank you. Your message has been validated successfully for demonstration.';
-    formStatus.style.color = 'var(--success)';
-    contactForm.reset();
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+    formStatus.textContent = 'Sending your message...';
+    formStatus.style.color = 'var(--muted)';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(contactForm),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Netlify form submission failed with status ${response.status}`);
+        }
+        formStatus.textContent = 'Thank you. Your message has been sent successfully.';
+        formStatus.style.color = 'var(--success)';
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('Contact form submission error:', error);
+        formStatus.textContent = 'Something went wrong sending your message. Please email me directly instead.';
+        formStatus.style.color = 'var(--danger)';
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      });
   });
 
   contactForm.addEventListener('input', (event) => {
