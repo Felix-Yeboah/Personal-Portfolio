@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Felix Yeboah including digital attendance management, smart digital exeat system, and personal portfolio website." />
+  <title>Project | Felix Yeboah Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="Home.HTML" aria-label="Felix Yeboah Home">
+      <img class="brand-logo" src="images/logo.png" alt="Felix Yeboah logo" />
+      <span class="brand-fallback" aria-hidden="true">FY</span>
+      <span class="brand-text">Felix Yeboah</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="Home.HTML" class="nav-link">Home</a>
+      <a href="About.HTML" class="nav-link">About</a>
+      <a href="Project.HTML" class="nav-link active">Project</a>
+      <a href="Contact.HTML" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Available for projects</span>
+      <div class="profile-chip" aria-label="Featured profile picture">
+        <img class="profile-photo profile-photo-small" src="images/felix.jpeg" alt="Portrait of Felix Yeboah" />
+        <span class="profile-fallback profile-fallback-small" aria-hidden="true">FY</span>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="theme-icon">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title page-panel profile-title-grid">
+      <div>
+        <p class="eyebrow">Projects</p>
+        <h1>Selected technology projects and institutional systems.</h1>
+        <p>
+          These projects show my practical experience with web design, database-driven workflows, digital automation, role-based access, and institutional ICT support.
+        </p>
+      </div>
+      <div class="profile-frame medium" aria-label="Featured profile picture">
+        <img class="profile-photo" src="images/felix.jpeg" alt="Portrait of Felix Yeboah" />
+        <span class="profile-fallback" aria-hidden="true">FY</span>
+      </div>
+    </section>
+
+    <section class="section page-panel" aria-labelledby="project-list-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio Work</p>
+        <h2 id="project-list-heading">Featured projects</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-meta">
+            <div class="project-tag">Google Apps Script · Google Sheets · Dashboard</div>
+            <span class="project-status">Deployed</span>
+          </div>
+          <h3>Digital Attendance Management System</h3>
+          <p>
+            A full-scale attendance management system designed for an ICT lab environment. It includes structured attendance capture, role-based access control, automated alerts, and a live reporting dashboard.
+          </p>
+          <ul>
+            <li>Admin, Teacher, and Viewer access levels</li>
+            <li>Automated alerts for attendance monitoring</li>
+            <li>Live dashboard for reporting and decision-making</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <div class="project-tag">Institutional Workflow · Automation</div>
+            <span class="project-status">Deployed</span>
+          </div>
+          <h3>Smart Digital Exeat System</h3>
+          <p>
+            A digital workflow system created to improve the management of exeat requests and approvals within an educational institution.
+          </p>
+          <ul>
+            <li>Improves request tracking and accountability</li>
+            <li>Supports paperless institutional workflow</li>
+            <li>Designed for practical school administration needs</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <div class="project-tag">HTML · CSS · JavaScript</div>
+            <span class="project-status">Live</span>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A responsive professional website built to showcase technical projects, experience, education, skills, and institutional systems work.
+          </p>
+          <ul>
+            <li>Mobile-first responsive layout</li>
+            <li>Light and dark mode toggle</li>
+            <li>Contact form with JavaScript validation</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <div class="project-tag">ICT Support · Networking · Systems</div>
+            <span class="project-status">Ongoing</span>
+          </div>
+          <h3>Institutional ICT Support</h3>
+          <p>
+            Ongoing ICT infrastructure support for institutional operations, including network support, systems administration, workflow digitization, and staff guidance.
+          </p>
+          <ul>
+            <li>Network and systems support</li>
+            <li>Database structuring advice</li>
+            <li>Document automation and digital workflow adoption</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Felix Yeboah. All rights reserved.</p>
+    <p class="footer-credit">Built with HTML, CSS &amp; JavaScript · Kumasi, Ghana</p>
+  </footer>
+</body>
+</html>

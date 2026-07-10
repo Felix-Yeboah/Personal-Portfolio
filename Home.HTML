@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Felix Yeboah - IT Professional portfolio website showcasing systems administration, web development, networking, database administration, and institutional technology projects." />
+  <title>Home | Felix Yeboah Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="Home.HTML" aria-label="Felix Yeboah Home">
+      <img class="brand-logo" src="images/logo.png" alt="Felix Yeboah logo" />
+      <span class="brand-fallback" aria-hidden="true">FY</span>
+      <span class="brand-text">Felix Yeboah</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="Home.HTML" class="nav-link active">Home</a>
+      <a href="About.HTML" class="nav-link">About</a>
+      <a href="Project.HTML" class="nav-link">Project</a>
+      <a href="Contact.HTML" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Available for projects</span>
+      <div class="profile-chip" aria-label="Featured profile picture">
+        <img class="profile-photo profile-photo-small" src="images/felix.jpeg" alt="Portrait of Felix Yeboah" />
+        <span class="profile-fallback profile-fallback-small" aria-hidden="true">FY</span>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="theme-icon">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-panel" aria-labelledby="home-title">
+      <div class="hero-content">
+        <p class="eyebrow">IT Professional · Educational Administrator · Web Developer</p>
+        <h1 id="home-title">Professional digital solutions for institutions and growing teams.</h1>
+        <p class="hero-text">
+          I am Felix Yeboah, a results-driven IT professional who builds practical systems for schools, organizations, and institutional teams. My work combines systems administration, responsive web development, networking, database-driven applications, and technology leadership.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="Project.HTML">View Projects</a>
+          <a class="btn secondary" href="Contact.HTML">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <aside class="profile-feature-card" aria-label="Felix Yeboah profile card">
+          <div class="profile-frame large">
+            <img class="profile-photo" src="images/felix.jpeg" alt="Portrait of Felix Yeboah" />
+            <span class="profile-fallback" aria-hidden="true">FY</span>
+          </div>
+          <div>
+            <h2>Felix Yeboah</h2>
+            <p class="role">IT Professional</p>
+          </div>
+          <ul class="quick-info">
+            <li><strong>Location:</strong> Kumasi, Ghana</li>
+            <li><strong>Email:</strong> greatfelixero2010@gmail.com</li>
+            <li><strong>Phone:</strong> +233 54 770 9236</li>
+          </ul>
+        </aside>
+
+        <div class="dashboard-widget" aria-label="Sample preview of a dashboard built for an institutional attendance system">
+          <div class="dw-head">
+            <span class="dw-title"><span class="status-dot" aria-hidden="true"></span>Attendance System</span>
+            <span class="dw-caption">Sample data</span>
+          </div>
+          <div class="dw-stats">
+            <div class="dw-stat"><strong>96%</strong><span>Present</span></div>
+            <div class="dw-stat"><strong>128</strong><span>Students</span></div>
+            <div class="dw-stat"><strong>3</strong><span>Alerts</span></div>
+          </div>
+          <div class="dw-chart" aria-hidden="true">
+            <span style="height: 55%;"></span>
+            <span style="height: 78%;"></span>
+            <span style="height: 62%;"></span>
+            <span style="height: 90%;"></span>
+            <span style="height: 71%;"></span>
+          </div>
+          <div class="dw-roles">
+            <span class="on">Admin</span>
+            <span class="on">Teacher</span>
+            <span>Viewer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-panel compact-grid" aria-labelledby="home-highlights">
+      <div>
+        <p class="eyebrow">Portfolio Focus</p>
+        <h2 id="home-highlights">Corporate-ready ICT support, web development, and workflow automation.</h2>
+        <p class="hero-text">Three areas institutions come to me for — infrastructure that stays reliable, interfaces that stay usable, and systems that report on themselves.</p>
+      </div>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <span class="card-number">01</span>
+          <h3>Systems Administration</h3>
+          <p>Supporting institutional ICT infrastructure, user access, digital workflow adoption, and reliable technology operations.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="card-number">02</span>
+          <h3>Web Development</h3>
+          <p>Building responsive websites and browser-based tools using HTML, modern CSS, JavaScript, and structured design principles.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="card-number">03</span>
+          <h3>Database Applications</h3>
+          <p>Designing database-driven solutions with role-based access, live dashboards, automated alerts, and practical reporting.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Felix Yeboah. All rights reserved.</p>
+    <p class="footer-credit">Built with HTML, CSS &amp; JavaScript · Kumasi, Ghana</p>
+  </footer>
+</body>
+</html>
